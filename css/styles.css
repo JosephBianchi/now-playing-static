@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 62.5%;
   color: #333333;
 }
 
@@ -79,13 +79,13 @@ figure {
   height: 60px;
   padding: 0.75em;
   font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
+  font-size: 1em;
   text-align: center;
   text-transform: uppercase;
 }
 
 .site-nav-item > .fa {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 }
 
 .site-nav-item:hover {
@@ -148,7 +148,7 @@ figure {
 
 .movie-title-label {
   font-family: "Montserrat", "Source Code Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.7em;
+  font-size: 2em;
   line-height: 1;
   text-transform: uppercase;
   color: gold;
@@ -157,7 +157,7 @@ figure {
 
 .movie-title {
   margin: 0;
-  font-size: 2em;
+  font-size: 3em;
   line-height: 1.1;
 }
 
@@ -195,3 +195,132 @@ figure {
 .about > p {
   margin: 0;
 }
+
+
+ /*-----------------------------------------------------------*/
+ /*Responsive Styles*/
+ /*-----------------------------------------------------------*/
+ @media ( min-width: 768px ) {
+
+   body {
+     padding-bottom: 0;
+   }
+
+   footer {
+     background: black;
+     height: 60px;
+   }
+
+   .site-footer {
+       font-size: 1rem;
+   }
+
+   .movie-overview {
+     display: inline-block;
+   }
+
+   .site-nav {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     width: 6rem;
+     padding-top: 5.5rem;
+     z-index: 50
+ }
+
+ .site-logo {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 6rem;
+     height: 6rem;
+     z-index: 100;
+     text-align: center;
+ }
+
+ .site-logo-image {
+     width: 50%;
+     margin: 25%;
+ }
+
+
+   .site-nav-item {
+       float: none;
+       width: 100%;
+     }
+
+     main {
+       margin-left: 6rem;
+     }
+
+     .footer-nav{
+       width: 48%;
+       display: inline-block;
+       float: left;
+       line-height: 40px;
+       background: black;
+       color: white;
+     }
+
+     .about {
+       width: 48%;
+       display: inline-block;
+       margin-left: 3%;
+       float: right;
+       background: black;
+       color: white;
+     }
+
+ }
+
+ @media ( min-width: 992px ) {
+
+   body {
+     padding-bottom: 0;
+   }
+
+
+   html {
+     background: black;
+   }
+
+   main article:not(:first-child) {
+     width: 33%;
+     float: left;
+   }
+
+   main article:not(:first-child) > figure > img:not(:first-child) {
+     display: none;
+   }
+
+   main article:not(:first-child) > div > p {
+       display: none;
+     }
+
+   main article:not(:first-child) > figure > img:first-child {
+     display: block;
+   }
+
+
+   main article:last-child {
+       width: 100%;
+       float: none;
+     }
+
+   main article:last-child > figure > img:not(:first-child) {
+     display: block;
+   }
+
+   main article:last-child > figure > img:first-child {
+     display: none;
+   }
+
+   .site-footer {
+       font-size: 0.9rem;
+   }
+
+   img {
+     width: 100%;
+   }
+
+ }
